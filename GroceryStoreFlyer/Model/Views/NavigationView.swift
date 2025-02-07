@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct NavigationView: View {
+    // MARK: Stored properties
+    let weeklyFlyer: Department
+
+    // MARK: Computed properties
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(weeklyFlyer.items) {currentFoodItem in
+            Text(currentFoodItem.name)
+        }
+        .navigationTitle(weeklyFlyer.name)
     }
 }
 
 #Preview {
-    NavigationView()
+    NavigationStack{
+        NavigationView(weeklyFlyer: thisWeeksFlyer.departments[0])
+    }
 }
+ 

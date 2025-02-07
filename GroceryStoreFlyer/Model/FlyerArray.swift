@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FlyerArray {
+struct Flyer {
     let departments: [Department]
 }
 
@@ -27,7 +27,11 @@ struct FoodItem: Identifiable {
 
 
 
-let thisWeeksFlyer = FlyerArray(
+
+
+
+
+let thisWeeksFlyer = Flyer(
 
     departments: [
 
