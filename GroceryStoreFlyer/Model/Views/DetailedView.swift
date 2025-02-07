@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationView: View {
+struct DetailedView: View {
     // MARK: Stored properties
     let weeklyFlyer: Department
 
@@ -29,7 +29,7 @@ struct NavigationView: View {
 
 #Preview {
     NavigationStack{
-        NavigationView(weeklyFlyer: thisWeeksFlyer.departments[0])
+        DetailedView(weeklyFlyer: thisWeeksFlyer.departments[0])
     }
 }
  
