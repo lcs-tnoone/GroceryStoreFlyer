@@ -15,6 +15,13 @@ struct NavigationView: View {
     var body: some View {
         List(weeklyFlyer.items) {currentFoodItem in
             Text(currentFoodItem.name)
+            Image(currentFoodItem.image)
+                .resizable()
+                .scaledToFit()
+            Text(currentFoodItem.size)
+            Text(currentFoodItem.price)
+            
+
         }
         .navigationTitle(weeklyFlyer.name)
     }

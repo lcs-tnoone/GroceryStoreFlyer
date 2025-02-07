@@ -41,15 +41,15 @@ let thisWeeksFlyer = Flyer(
                 FoodItem(
                     name: "Sirloin Tip Oven Roasts",
                     image: "sirloinTipOvenRoast",
-                    price: "6.97",
-                    size: "lb"
+                    price: "$6.97",
+                    size: "per/lb"
                     
                 ),
                 FoodItem(
                     name: "Porkloin Back Ribs",
                     image: "porkloinBackRibs",
-                    price: "3.97",
-                    size: "lb"
+                    price: "$3.97",
+                    size: "per/lb"
                 ),
             ]
         ),
@@ -60,20 +60,20 @@ let thisWeeksFlyer = Flyer(
                 FoodItem(
                     name: "Wild Pacific Halibut Fillets",
                     image: "wildPacificHalibutFillets",
-                    price: "4.97",
+                    price: "$4.97",
                     size: "100g"
 
                 ),
                 FoodItem(
                     name: "Wild Sockeye Salmon Fillets",
                     image: "wildSockeyeSalmonFillets",
-                    price: "3.47",
+                    price: "$3.47",
                     size: "100g"
                 ),
                 FoodItem(
                     name: "Clam Chowder",
                     image: "clamChowder",
-                    price: "11.97",
+                    price: "$11.97",
                     size: "each"
                 ),
             ]
