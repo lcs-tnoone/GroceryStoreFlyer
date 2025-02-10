@@ -13,15 +13,31 @@ struct DetailedView: View {
 
     // MARK: Computed properties
     var body: some View {
-        List(weeklyFlyer.items) {currentFoodItem in
-            Text(currentFoodItem.name)
-            Image(currentFoodItem.image)
-                .resizable()
-                .scaledToFit()
-            Text(currentFoodItem.size)
-            Text(currentFoodItem.price)
-            
+        List(weeklyFlyer.items) { currentFoodItem in
+            VStack {
+                // Display item image with text overlay
+                Image(currentFoodItem.image)
+                    .resizable()
+                    .scaledToFit()
+                    .overlay(alignment: .topLeading) {
+                        Text(currentFoodItem.name)
+                            .foregroundStyle(.blue)
+                            .font(.system(size: 32))
+                            .fontWeight(.black)
+                            .overlay {
+                                Text(currentFoodItem.name)
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 32))
+                                    .fontWeight(.black)
+                                    .offset(x: -3, y: -3)
+                    
+                            }
+                            .padding(10)
+                    }
 
+                // Display item price and size
+                Text("\(currentFoodItem.price) per \(currentFoodItem.size)")
+            }
         }
         .navigationTitle(weeklyFlyer.name)
     }

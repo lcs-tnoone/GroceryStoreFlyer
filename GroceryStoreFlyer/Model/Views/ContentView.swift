@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationStack{
             List(thisWeeksFlyer.departments) {currentdepartment in
                 NavigationLink {
-                    NavigationView(weeklyFlyer: currentdepartment)
+                    DetailedView(weeklyFlyer: currentdepartment)
                 } label: {
                     Text(currentdepartment.name)
                 }
